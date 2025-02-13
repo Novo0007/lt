@@ -1,0 +1,187 @@
+    /* General Styles */
+    :root {
+      --bg-color: #ffebee; /* Light pink background */
+      --text-color: #880e4f; /* Deep pink text */
+      --primary-color: #d32f2f; /* Red */
+      --secondary-color: #f06292; /* Pink */
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #880e4f; /* Dark pink background */
+      --text-color: #ffebee; /* Light pink text */
+      --primary-color: #f06292; /* Pink */
+      --secondary-color: #d32f2f; /* Red */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link {
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .link:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 1); /* Solid white on hover */
+    }
+
+    .link i {
+      font-size: 1.2rem;
+    }
+
+    /* Heart Animation */
+    .heart {
+      position: absolute;
+      top: -10%;
+      animation: fall 5s linear infinite;
+      color: #d32f2f; /* Red hearts */
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10%); }
+      100% { transform: translateY(110vh); }
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: var(--text-color);
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--text-color);
+    }
+
+    .contact-form button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: var(--primary-color);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: var(--secondary-color);
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .link {
+        padding: 12px;
+      }
+    }
