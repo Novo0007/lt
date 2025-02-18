@@ -1,20 +1,22 @@
-    /* General Styles */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+       /* General Styles */
     :root {
-      --bg-color: #ffebee; /* Light pink background */
-      --text-color: #880e4f; /* Deep pink text */
+      --bg-color: #fff4bc; /* Light pink background */
+      --text-color: #000000; /* Deep pink text */
       --primary-color: #d32f2f; /* Red */
       --secondary-color: #f06292; /* Pink */
     }
 
     [data-theme="dark"] {
-      --bg-color: #880e4f; /* Dark pink background */
+      --bg-color:#e600ff; /* Dark pink background */
       --text-color: #ffebee; /* Light pink text */
       --primary-color: #f06292; /* Pink */
       --secondary-color: #d32f2f; /* Red */
     }
 
     body {
-      font-family: 'Arial', sans-serif;
+       font-family: "Poppins", Arial, sans-serif;
+
       margin: 0;
       padding: 0;
       background: var(--bg-color);
@@ -43,9 +45,9 @@
     .logo {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      animation: bounce 2s infinite;
+      border-radius: 25%;
+      margin-bottom: -26px;
+      animation: bounce 20s infinite;
     }
 
     .links {
@@ -55,11 +57,11 @@
     }
 
     .link {
-      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      background:rgb(255 238 7 / 98%); /* Semi-transparent white */
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 50px;
       text-decoration: none;
-      color: var(--text-color);
+      color: #000000;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -182,6 +184,6 @@
       }
 
       .link {
-        padding: 12px;
+        padding: 28px;
       }
     }
